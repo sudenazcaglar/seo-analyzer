@@ -44,3 +44,5 @@ class UserTests(APITestCase):
     def test_profile_access_without_token(self):
         response = self.client.get(self.profile_url)
         self.assertEqual(response.status_code, status.HTTP_401_UNAUTHORIZED)
+
+        
